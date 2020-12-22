@@ -30,7 +30,7 @@ content <- readxl::read_xlsx(
 content$date <- gsub("^2021-", "", as.character(content$date))
 content <- content %>% 
   mutate(
-    across(#starts_with("assigned") | 
+    across(starts_with("assigned") | 
              starts_with("due") | 
              starts_with("slides") |
              starts_with("lecture"),
@@ -60,12 +60,12 @@ week <- function(row, odd = TRUE) {
     
     slides <- wrap(shortcode_html("slides", row$slides))
     
-    #assigned_link <- split_entries(row$assigned_link)
-    #assigned_title <- split_entries(row$assigned_title)
-    #assigned <- purrr::pmap(list(assigned_link,assigned_title), ~{
-        #shortcode_html("assigned", ..1, ..2)
-      #})
-    #assigned <- wrap(paste(assigned, collapse = "\n"))
+    assigned_link <- split_entries(row$assigned_link)
+    assigned_title <- split_entries(row$assigned_title)
+    assigned <- purrr::pmap(list(assigned_link,assigned_title), ~{
+        shortcode_html("assigned", ..1, ..2)
+      })
+    assigned <- wrap(paste(assigned, collapse = "\n"))
     
     due_link <- split_entries(row$due_link)
     due_title <- split_entries(row$due_title)
@@ -87,7 +87,7 @@ week <- function(row, odd = TRUE) {
   paste(op, 
         indent(des), 
         indent(slides), 
-        #indent(assigned), 
+        indent(assigned), 
         indent(due),
         indent(read),
         indent(lecture),
@@ -110,7 +110,7 @@ week_content <- function(week_classes) {
 
 print_weeks <- function(week_data) {
   cat("\n", 
-      paste("## Parte", unique(week_data$week)),
+      paste("## Week", unique(week_data$week)),
       "\n",
       week_content(week_data)
       )

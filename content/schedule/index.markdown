@@ -20,13 +20,16 @@ Además de los libros de texto referenciados a continuación, hoy en día estoy 
 <br>
 
 
- ## Parte 1 
+ ## Week 1 
  {{< schedule >}}
 
 {{< week-odd "Hola" >}}
   {{< description "Hola" "Hola" >}}
   {{< wrap >}}
 {{< slides "Hola" >}}
+{{< /wrap >}}
+  {{< wrap >}}
+{{< assigned "Hola" "Hola" >}}
 {{< /wrap >}}
   {{< wrap >}}
 {{< due "Hola" "Hola" >}}
