@@ -1,0 +1,27 @@
+---
+title: ""
+toc: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(message = FALSE,
+                      warning = FALSE,
+                      echo = FALSE)
+```
+
+<div class = "meeting-time">
+
+<div class = "meeting-specifics">
+
+* **Aula de clase:** Virtual
+* **Profesor:** Jorge Leonardo López Martínez
+  + *email:* (Principal método de contacto) [jollpezma@unal.edu.co](jollpezma@unal.edu.co)
+
+</div>
+
+<div class = "logo">
+  <img src = "../imagen_curso.png" height = 200px>
+</div>
+
+</div>
+
