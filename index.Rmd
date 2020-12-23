@@ -1,3 +1,10 @@
 ---
 site: blogdown:::blogdown_site
 ---
+
+<!--
+Paginas que use para construir esta página web:
+- https://alison.rbind.io/post/2017-06-12-up-and-running-with-blogdown/
+- https://pamepairo.netlify.app/post/18-12-2020-creando-pagina-web/
+- https://dataviz-2021.netlify.app/
+-->
