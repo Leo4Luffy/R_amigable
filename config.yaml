@@ -1,4 +1,4 @@
-baseURL: "/"
+baseURL: /
 ignoreFiles: ["\\.Rmd$", "\\.Rmarkdown$", "_cache$", "\\.knit\\.md$", "\\.utf8\\.md$"]
 languageCode: en-us
 title: R amigable
